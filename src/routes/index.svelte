@@ -1,5 +1,6 @@
 <script>
-  import Faq from "../components/Faq.svelte";
+  import ContactForm1 from "../components/ContactForm1.svelte";
+import Faq from "../components/Faq.svelte";
 import Services from "../components/Services.svelte";
   import Testimonials from "../components/Testimonials.svelte";
 import GoogleOneTapLogin from "./GoogleOneTapLogin.svelte";
@@ -64,9 +65,11 @@ let bannerContent = {
       </div>
     </div>
   </div>
+
+  <ContactForm1/>
   
  
-  <div class="rs-contact contact-style2">
+  <!-- <div class="rs-contact contact-style2">
     <div class="container">
         <div class="requset-contact">
             <div class="sec-title mb-40 md-mb-30">
@@ -120,7 +123,7 @@ let bannerContent = {
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 
