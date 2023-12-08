@@ -109,7 +109,6 @@ const fetchLocationSuggestions = async () => {
                 <div class="col-lg-4 col-sm-6 sm-mb-30">
                     <span class="wpcf7-form-control-wrap arrow4 Services services_select">
                         <select name="Services select" id="default_hide">
-                            <option disabled value="">Select a Service</option>
                             <option>All Type of Building Construction</option>
                             <option>Interiors</option>
                             <option>Renovation</option>
