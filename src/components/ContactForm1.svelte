@@ -78,79 +78,56 @@ const fetchLocationSuggestions = async () => {
   </script>
   <div class="rs-contact contact-style2">
     <div class="container">
-      <div class="requset-contact">
-        <div class="sec-title mb-40 md-mb-30">
-          <h2 class="title title2">
-            Request A Services
-          </h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 mb-30">
-            <span class="wpcf7-form-control-wrap">
-              <input type="text" id="name" name="name" placeholder=" Name" bind:value={name} required="">
-            </span>
-          </div>
-          <div class="col-lg-4 col-sm-6 mb-30">
-            <span class="wpcf7-form-control-wrap arrow2">
-              <input type="text" id="phone-number" name="phone-number" placeholder="Phone Number" bind:value={phoneNumber} required="">
-            </span>
-          </div>
-          <div class="col-lg-4 col-sm-6 mb-30">
-            <span class="wpcf7-form-control-wrap">
-              <input type="text" id="email" name="email" placeholder="Email" bind:value={email} required="">
-            </span>
-          </div>
-          <div class="col-lg-4 col-sm-6 md-mb-30">
-            <span class="wpcf7-form-control-wrap arrow3">
-                <input
-                type="text"
-                bind:value={inputValue}
-                on:input={fetchLocationSuggestions}
-                placeholder="Your Address"
-                required=""
-              />
-          
-              <!-- Display suggestions -->
-              {#if suggestions.length > 0}
-              <ul>
-                {#each suggestions as suggestion (suggestion.place_id)}
-                  <li
-                    on:click={() => handleSuggestionClick(suggestion)}
-                    on:keydown={(event) => {
-                      if (event.key === "Enter") {
-                        handleSuggestionClick(suggestion);
-                      }
-                    }}
-                  >
-                    {suggestion.display_name}
-                  </li>
-                {/each}
-              </ul>
-            {/if}
-            
-          </div>
-          <div class="col-lg-4 col-sm-6 sm-mb-30">
-            <span class="wpcf7-form-control-wrap arrow4 Services services_select">
-              <select name="Services select" id="default_hide" bind:value={selectedService}>
-                <option>Services</option>
-                <option>General construction</option>
-                <option>Modified Roofing</option>
-                <option>Metal Roofing</option>
-                <option>Vegetative Roofing</option>
-                <option>Inspections</option>
-                <option>Siding & Gutters</option>
-              </select>
-            </span>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="services-btn">
-              <p class="submit-btn">
-                <input type="submit" value="Submit Services Request" on:click={handleSubmit}>
-              </p>
+        <div class="requset-contact">
+            <div class="sec-title mb-40 md-mb-30">
+                <h2 class="title title2">
+                    Request A Services
+                </h2>
             </div>
-          </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-sm-6 mb-30">
+                    <span class="wpcf7-form-control-wrap">
+                        <input type="text" id="name" name="name" placeholder=" Name" required="">
+                    </span>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-30">
+                    <span class="wpcf7-form-control-wrap arrow2">
+                        <input type="text" id="phone-number" name="phone-number" placeholder="Phone Number" required="">
+                    </span>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-30">
+                    <span class="wpcf7-form-control-wrap">
+                        <input type="text" id="email" name="email" placeholder="Email" required="">
+                    </span>
+                </div>
+                <div class="col-lg-4 col-sm-6 md-mb-30">
+                    <span class="wpcf7-form-control-wrap arrow3">
+                        <input type="text" id="your-address" name="your-address" placeholder="Your Address" required="">
+                    </span>
+                </div>
+                <div class="col-lg-4 col-sm-6 sm-mb-30">
+                    <span class="wpcf7-form-control-wrap arrow4 Services services_select">
+                        <select name="Services select" id="default_hide">
+                            <option disabled value="">Select a Service</option>
+                            <option>All Type of Building Construction</option>
+                            <option>Interiors</option>
+                            <option>Renovation</option>
+                            <option>Architectural Planning (2D & 3D)</option>
+                            <option>Bank Loan Estimation</option>
+                        </select>
+                    
+                    <div class="select-selected">Services</div><div class="select-items select-hide"><div>General construction</div><div>Modified Roofing</div><div>Metal Roofing</div><div>Vegetative Roofing</div><div>Inspections</div><div>Siding &amp; Gutters</div></div></span>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="services-btn">
+                        <p class="submit-btn">
+                            <input type="submit" value="Submit Services Request" class="Submit Services Request">
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
   
